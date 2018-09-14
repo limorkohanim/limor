@@ -1,15 +1,151 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> learn about milan </title> 
-  </head>
-  <body>
-    <h1> what do you know about milan? </h1>
-    
-    <p> start the quiz </p>
-    <img src="https://www.bing.com/images/search?view=detailV2&ccid=szNK5ql5&id=AC2C1CF6527AE8E86CA4A8C44F0766F1F80874B8&thid=OIP.szNK5ql5Yhab0EJ_jKwMRgHaEV&mediaurl=http%3A%2F%2Fwww.royalgardenhotelmilano.com%2Ffiles%2Fhotel%2Fmilan%2FDuomo-di-Milano-02.jpg&exph=1113&expw=1900&q=milano&simid=608014672747888758&ajaxhist=0&insmi=m_&selectedindex=1"/>
-    
-  </body>
 </html>
         
+div id="QA">    
+    <h2></h2>
+    <span id="buttons"></span>
+    <p id="mkttext"></p>
+    <p><strong>Points</strong> : <span>0</span></p>
+    <div id="demo"></div>
+    <br>
+    <div id="centerbutton">
+<button id="restart" onClick="history.go(0)">Restart game</button>
+</div>
+
+  </div>
+
+
+<script>
+
+
+
+var questionnaire = [
+
+  {
+    "question" : "Q: The earth is round",
+    "valid"    : 1, // indicates the correct array number, use 0, 1...
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is True"]  
+  },
+  {
+    "question" : "Q: The correct answer is True",
+    "valid"    : 1,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is True"] 
+  },
+  {
+    "question" : "Q: Java = JavaScript",
+    "valid"    : 0, 
+    "buttons"  : ["False", "True"],
+   "answers"  : [ "The correct answer is False"] 
+  },
+    {
+    "question" : "Q: Grapes explode when you put them in the microwave",
+    "valid"    : 1,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is True"] 
+  },
+    {
+    "question" : "Q: Shakespeare invented both chess and the basketball",
+    "valid"    : 0,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is False"] 
+  },
+    {
+    "question" : "Q: LoL stands for World of Warcraft",
+    "valid"    : 0,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is False"] 
+  },
+    {
+    "question" : "Q: The average human will shed 40 pounds of skin in a lifetime.",
+    "valid"    : 1,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is True"] 
+  },
+    {
+    "question" : "Q: A giraffe can clean its ears with its 121-inch tongue",
+    "valid"    : 0,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is False"] 
+  },
+      {
+    "question" : "Q:  Nepal is the only country that doesn't have a rectangular flag",
+    "valid"    : 1,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is True"] 
+  },
+    {
+    "question" : "Q: The match was invented before the cigarette lighter",
+    "valid"    : 0,
+    "buttons"  : ["False", "True"],
+    "answers"  : [ "The correct answer is False"] 
+  },
+      {
+    "question" : "Game over, check your score below.",
+
+  }
+
+];
+
+
+var $qa       = $('#QA'),
+    $question = $("h2", $qa),
+    $buttons   = $("#buttons", $qa),
+    $points   = $("p>span",$qa),
+    questionnaireLength = questionnaire.length,
+    qc        = 0, // Current Question counter
+    points    = 0; // Current points
+
+function QandA(){
+
+  var quest = questionnaire[qc],
+      question = quest.question,
+      validIdx = quest.valid,
+      btns     = quest.buttons,
+      answer   = quest.answers;
+
+  $question.text( question );
+
+
+
+  //End of the game
+  if(qc >= questionnaireLength -1){ 
+
+    var link = document.getElementById('buttons');
+    link.style.display = 'none'; 
+
+  }
+
+  // generate buttons with text:
+  $buttons.empty();
+  var i=0; i<btns.length;{
+    $buttons.append("<button id='btnfalse'>"+ btns[i] +"</button>");
+  }
+    var i=1; i<btns.length;{
+    $buttons.append("<button id='btntrue'>"+ btns[i] +"</button>");
+  }
+
+
+
+  // Retrieve generated buttons
+  var $btn = $("button", $buttons);
+
+  // Assign click
+  $btn.one('click', function(){  
+    var idx = $btn.index(this); // get button index
+
+    //var parent = document.getElementById('mkttext');
+    //var p = document.createElement('p');
+    //p.innerHTML = "Game says: "+ answer[idx] ;
+    //parent.appendChild(p);
+
+    points += (idx === parseInt(validIdx, 10) ? 1 : -0); 
+    $points.text( points );
+    // Next question
+    qc++; QandA();
+  });
+
+}
+QandA();
+
+</script>
