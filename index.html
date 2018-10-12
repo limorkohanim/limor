@@ -13,7 +13,7 @@
     </canvas>
     
     <input type="button" id="button1" value="prova" style="position:absolute; bottom:600px left:400px;"onclick="vincita();"/>
-    
+    <button onclick="inizia()">inizia</button>
     <script>
     function vincita() {
       document.getElementById("foto").style.display="none";
@@ -22,7 +22,7 @@
       document.getElementById("button1").style.display="none";
      }
      
-     function myCanvas() {
+     function inizia () {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var img = document.getElementById("foto");
