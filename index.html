@@ -6,14 +6,15 @@
   <body>
     <h1> trova Gianni</h1>
     <img id="gianni" src="gianni.jpg" width="120" height="120">
-    <img id="foto" src="foto.jpg" style="display:none">
+    <img id="foto" src="foto.jpg">
     <img id="gif" src="https://media.giphy.com/media/c4rB7DMXKgktG/giphy.gif" style="display:none">
     
     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
     </canvas>
     
     <input type="button" id="button1" value="prova" style="position:absolute; bottom:600px left:400px;"onclick="vincita();"/>
-    <button onclick="inizia()">inizia</button>
+    <p><button onclick="inizia()">inizia</button></p>
+
     <script>
     function vincita() {
       document.getElementById("foto").style.display="none";
