@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-    background-color: blue;
+  <head>
+   <title> trova Gianni!! </title> 
+  </head>
+  <body>
+    <h1> trova Gianni</h1>
+    <img id="gianni" src="gianni.jpg" >
+    <img id="foto" src="foto.jpg" width="300" height="300">
+    <img id="gif" src="https://media.giphy.com/media/c4rB7DMXKgktG/giphy.gif" style="display:none">
+    
+    <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000000;">
+    </canvas>
+    
+    <input type="button" id="button1" value="prova" style="position:absolute; bottom:600px left:400px;"onclick="vincita();"/>
+    <p><button onclick="inizia()">inizia</button></p>
+
+    <script>
+    function vincita() {
+      document.getElementById("foto").style.display="none";
+      document.getElementById("gianni").style.display="none";
+      document.getElementById("gif").style.display="block";
+      document.getElementById("button1").style.display="none";
+     }
+     function inizia() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("foto");
+    ctx.drawImage(img,10,10);
 }
-
-h1 {
-    color: red;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-    .testo {color:green;}
-    #testo2 { font-size: 300px;}
-</style>
-</head>
-<body>
-
-<h1>canzoni</h1>
-<h2>The beatles.</h2>
-        
-   
-    <p> esempio </p>
-    <p class="testo">.ciao.</p>
-     <h3 id="titolo">.testo2.</h1>
-   
-
-</body>
+    
+    </script>
+  </body>
 </html>
