@@ -5,16 +5,12 @@
   </head>
   <body>
     <h1> trova Gianni</h1>
-    <img id="gianni" src="gianni.jpg" >
-    <img id="foto" src="foto.jpg" width="500px" height="300px" >
+    <img id="gianni" src="gianni.jpg" width="120" height="120">
+    <img id="foto" src="foto.jpg" center="auto">
     <img id="gif" src="https://media.giphy.com/media/c4rB7DMXKgktG/giphy.gif" style="display:none">
     
-    <!--<canvas id="myCanvas" width="800" height="400" style="border:1px; z-index:1; solid #000000;">
-    </canvas>-->
+    <input type="button" id="button1" value="prova" style="position:absolute; bottom:600px left:400px;"onclick="vincita();"/>
     
-    <input type="button" id="button1" value="prova" style="position:absolute; bottom:200px left:200px;"onclick="vincita();"/>
-    <!--<p><button onclick="inizia()">inizia</button></p>-->
-
     <script>
     function vincita() {
       document.getElementById("foto").style.display="none";
@@ -22,8 +18,7 @@
       document.getElementById("gif").style.display="block";
       document.getElementById("button1").style.display="none";
      }
-                       
-}
+    
     
     </script>
   </body>
