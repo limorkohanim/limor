@@ -13,7 +13,8 @@ var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Koha
     function rndinterrogato() {
     var inte = alunni[Math.floor(Math.random()*alunni.length)];
     document.getElementById("h1").innerHTML = inte;
-     if ( inte<=alunni[5]) {
+    
+      if ( inte < alunni[5]) {
        document.getElementById("gif1").style.display="block";
      }
     }
