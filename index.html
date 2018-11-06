@@ -3,14 +3,13 @@
 <body>
 <h1 id="h1"> chi sarà l'interrogato? </h1>
 <button onclick="rndinterrogato()">Try it</button>
-<audio  controls autoplay loop id="audio" src="Tension(Short Music Loop).mp3">
-
-<script>
+<img id="gif" src="Tension (Short Music Loop).mp3" style="display:block">
+  
+    <script>
 var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
 function rndinterrogato(primo, ultimo) {
     var inte = alunni[Math.floor(Math.random()*alunni.length)];
     document.getElementById("h1").innerHTML = inte;
-    document.getElementById("audio").style.display= "none";
     
 }
 </script>
