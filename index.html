@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-   <title> trova Gianni!! </title> 
-  </head>
-  <body>
-    <h1> trova Gianni</h1>
-    <img id="gianni" src="gianni.jpg" width="120" height="120">
-    <img id="foto" src="foto.jpg" center="auto">
-    <img id="gif" src="https://media.giphy.com/media/c4rB7DMXKgktG/giphy.gif" style="display:none">
+
+<body>
+<h1 id="h1"> chi sarà l'interrogato? </h1>
+<button onclick="rndinterrogato()">Try it</button>
+<source src="" type="audio/mp3" />
+
+<script>
+var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
+function rndinterrogato(primo, ultimo) {
+    var inte = alunni[Math.floor(Math.random()*alunni.length)];
+    document.getElementById("h1").innerHTML = inte;
     
-    <input type="button" id="button1" value="prova" style="position:absolute; bottom:200 left:200;"onclick="vincita();"/>
-    
-    <script>
-    function vincita() {
-      document.getElementById("foto").style.display="none";
-      document.getElementById("gianni").style.display="none";
-      document.getElementById("gif").style.display="block";
-      document.getElementById("button1").style.display="none";
-     }
-    
-    
-    </script>
-  </body>
+}
+</script>
+</body>
 </html>
