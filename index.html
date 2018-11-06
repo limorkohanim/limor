@@ -2,26 +2,32 @@
 
 <body>
 <h1 id="h1"> chi sarà l'interrogato? </h1>
-  <p id="p"></p>
 <button onclick="rndinterrogato()">Try it</button>
-<img id="gif1" src="https://media.giphy.com/media/jquDWJfPUMCiI/giphy.gif" style="display:none">
- <img id="gif2" src="https://giphy.com/gifs/mrw-boy-51Uiuy5QBZNkoF3b2Z" style="display:none" >
+<img id="gif1" src="https://media.giphy.com/media/13Cmju3maIjStW/giphy.gif" style="display:none">
  
-var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
+<img id="gif2" src="https://media.giphy.com/media/KupdfnqWwV7J6/giphy.gif" style="display:none" >
+ 
+<script>
+var alunni = ["Sara Abou Hamrah", "Daniel Bueno", "Beniamino Foà", " Alberto Hallac", "Davide Hassan", "Laura Katri", "Limor Kohanim","Andrè Liuim", "Raphael Loloey", "Jonathan Rimini", "Jordan Sassoon", "Tommaso Sazbon", "Dalia Somekh", "Joshua Turiel", "Yoel Zelnick" ];
+function rndinterrogato(primo, ultimo) {
+    var inte = alunni[Math.floor(Math.random()*alunni.length)];
+    document.getElementById("h1").innerHTML = inte;
     
-    function rndinterrogato() {
-        
-       var inte = alunni[Math.floor(Math.random()*alunni.length)];
-        document.getElementById("h1").innerHTML = inte;
+      if (inte < alunni[7]) {
+         
+document.getElementById("gif1").style.display="block";
+ 
+document.getElementById("gif2").style.display="none";
+    
+} 
+if (inte > alunni[8] ) {
      
-      if ( inte < alunni[7]) {
-         document.getElementById("gif1").style.display="block";
-     } else {
-       document.getElementById("gif1").style.display="none";
-       document.getElementById("gif2").style.display="block";
-     }
-
-       }
+document.getElementById("gif1").style.display="none";
+       
+document.getElementById("gif2").style.display="block";
+    
+ } 
+}
 </script>
 </body>
 </html>
