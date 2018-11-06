@@ -3,13 +3,14 @@
 <body>
 <h1 id="h1"> chi sarà l'interrogato? </h1>
 <button onclick="rndinterrogato()">Try it</button>
-<source src="https://github.com/limorkohanim/limorkohanim.github.io/commit/67589d2cce471008896d128994b083835ca084a3" type="audio/mp3" />
+<source id = "soundtrack" src="https://github.com/limorkohanim/limorkohanim.github.io/commit/67589d2cce471008896d128994b083835ca084a3" type="audio/mp3" style="display:block" />
 
 <script>
 var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
 function rndinterrogato(primo, ultimo) {
     var inte = alunni[Math.floor(Math.random()*alunni.length)];
     document.getElementById("h1").innerHTML = inte;
+    document.getElementById("soundtrack").style.display= "none";
     
 }
 </script>
