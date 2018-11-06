@@ -11,22 +11,26 @@
 var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
     
     function rndinterrogato() {
-    var inte = alunni[Math.floor(Math.random()*alunni.length)];
-    document.getElementById("h1").innerHTML = inte;
     
       if ( inte <== alunni[5]) {
-       document.getElementById("gif1").style.display="block";
+         document.getElementById("gif1").style.display="block";
+         var inte = alunni[Math.floor(Math.random()*alunni.length)];
+         document.getElementById("h1").innerHTML = inte;
      } else {
        document.getElementById("gif1").style.display="none";
      }
       
       if ( inte > alunni[5] && inte < alunni[10] ) {
         document.getElementById("gif2").style.display="block";
+        var inte = alunni[Math.floor(Math.random()*alunni.length)];
+        document.getElementById("h1").innerHTML = inte;
     } else {
       document.getElementById("gif2").style.display="none";
       
       if ( inte >== alunni[10]) {
         document.getElementById("gif3").style.display="block";
+        var inte = alunni[Math.floor(Math.random()*alunni.length)];
+        document.getElementById("h1").innerHTML = inte;
       } else {
         document.getElementById("gif3").style.display="none";
       }
