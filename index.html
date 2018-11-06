@@ -16,8 +16,22 @@ var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Koha
     
       if ( inte <== alunni[5]) {
        document.getElementById("gif1").style.display="block";
+     } else {
+       document.getElementById("gif1").style.display="none";
      }
-    }
+      
+      if ( inte > alunni[5] && inte < alunni[10] ) {
+        document.getElementById("gif2").style.display="block";
+    } else {
+      document.getElementById("gif2").style.display="none";
+      
+      if ( inte >== alunni[10]) {
+        document.getElementById("gif3").style.display="block";
+      } else {
+        document.getElementById("gif3").style.display="none";
+      }
+      
+       }
 </script>
 </body>
 </html>
