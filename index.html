@@ -6,41 +6,21 @@
 <button onclick="rndinterrogato()">Try it</button>
 <img id="gif1" src="https://media.giphy.com/media/jquDWJfPUMCiI/giphy.gif" style="display:none">
  <img id="gif2" src="https://giphy.com/gifs/mrw-boy-51Uiuy5QBZNkoF3b2Z" style="display:none" >
- <img id="gif3" src="https://giphy.com/gifs/hoppip-the-simpsons-scared-homer-simpson-9sSrddsom3yb6" style="display:none" >
-  <script>
+ 
 var alunni = ["Abou Hamrah", "Bueno", "Foà", "Hallac", "Hassan", "Katri", "Kohanim","Liuim", "Loloey", "Rimini", "Sassoon", "Sazbon", "Somekh", "Turiel", "Zelnick" ];
     
     function rndinterrogato() {
-    
-      if ( inte <== alunni[5]) {
+        
+       var inte = alunni[Math.floor(Math.random()*alunni.length)];
+        document.getElementById("h1").innerHTML = inte;
+     
+      if ( inte < alunni[7]) {
          document.getElementById("gif1").style.display="block";
-         var inte = alunni[Math.floor(Math.random()*alunni.length)];
-         document.getElementById("h1").innerHTML = inte;
      } else {
        document.getElementById("gif1").style.display="none";
-               var inte = alunni[Math.floor(Math.random()*alunni.length)];
-        document.getElementById("h1").innerHTML = inte;
+       document.getElementById("gif2").style.display="block";
      }
-      
-      if ( inte > alunni[5] && inte < alunni[10] ) {
-        document.getElementById("gif2").style.display="block";
-        var inte = alunni[Math.floor(Math.random()*alunni.length)];
-        document.getElementById("h1").innerHTML = inte;
-    } else {
-      document.getElementById("gif2").style.display="none";
-      var inte = alunni[Math.floor(Math.random()*alunni.length)];
-      document.getElementById("h1").innerHTML = inte;
-      
-      if ( inte >== alunni[10]) {
-        document.getElementById("gif3").style.display="block";
-        var inte = alunni[Math.floor(Math.random()*alunni.length)];
-        document.getElementById("h1").innerHTML = inte;
-      } else {
-        document.getElementById("gif3").style.display="none";
-                var inte = alunni[Math.floor(Math.random()*alunni.length)];
-        document.getElementById("h1").innerHTML = inte;
-      }
-      
+
        }
 </script>
 </body>
